@@ -1,5 +1,5 @@
 package com.sam.rest.webservices.config;
-
+/*
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.hateoas.client.LinkDiscoverer;
@@ -49,3 +49,4 @@ public class SwaggerConfig {
 
     }
 }
+*/
