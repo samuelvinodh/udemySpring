@@ -1,6 +1,6 @@
 package com.sam.spring.basics;
 
-import com.sam.spring.basics.scope.PersonDAO;
+import com.sam.spring.basics.cdi.SomeCdiBusiness;
 import com.sam.spring.component.ComponentPersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,19 +13,19 @@ import org.springframework.context.annotation.Configuration;
 
 //@SpringBootApplication
 @Configuration
-@ComponentScan("com.sam.spring.component")
-public class SpringIn5StepsComponentApplication {
-	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsComponentApplication.class);
+@ComponentScan
+public class SpringIn5StepsCdiApplication {
+	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsCdiApplication.class);
 
 	public static void main(String[] args) {
 
 		//ApplicationContext applicationContext =
-				//SpringApplication.run(SpringIn5StepsComponentApplication.class, args);
+				//SpringApplication.run(SpringIn5StepsCdiApplication.class, args);
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(
-				SpringIn5StepsComponentApplication.class);
-		ComponentPersonDAO personDAO = applicationContext.getBean(ComponentPersonDAO.class);
-		LOGGER.info("{}",personDAO);
-		LOGGER.info("{}",personDAO.getComponentJdbcConnection());
+				SpringIn5StepsCdiApplication.class);
+		SomeCdiBusiness someCdiBusiness = applicationContext.getBean(SomeCdiBusiness.class);
+		LOGGER.info("{} - dao - {}",someCdiBusiness,someCdiBusiness.getSomeCdiDao());
+
 	}
 
 }

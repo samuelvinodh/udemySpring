@@ -5,12 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 //@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-@Component // -- [3. Using Spring ApplicationContext]
+//@Component // -- [3. Using Spring ApplicationContext]
+@Service
 public class BinarySearchImpl {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
