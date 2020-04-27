@@ -1,9 +1,9 @@
 package com.sam.spring.basics;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class SpringIn5StepsApplicationTests {
 
 	@Test

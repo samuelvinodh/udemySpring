@@ -1,8 +1,5 @@
 package com.sam.spring.basics.cdi;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -18,5 +15,16 @@ public class SomeCdiBusiness {
 
     public void setSomeCdiDao(SomeCdiDao someCdiDao) {
         this.someCdiDao = someCdiDao;
+    }
+
+    public int findGreatest(){
+        int[] data = someCdiDao.getData();
+        int greatest = Integer.MIN_VALUE;
+        for(int value: data){
+            if(value > greatest){
+                greatest = value;
+            }
+        }
+        return greatest;
     }
 }
