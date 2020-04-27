@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SomeBusinessImplTest {
+public class SomeBusinessStubTest {
     private SomeBusinessImpl someBusiness = new SomeBusinessImpl(new DataStub());
 
     @Test
